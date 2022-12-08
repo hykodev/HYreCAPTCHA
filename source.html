@@ -1,0 +1,46 @@
+<script>
+jQuery('.elementor-g-recaptcha').each(function() {
+    jQuery(this).html('<p id="fr">Ce formulaire est protégé par reCAPTCHA et la <a href="https://policies.google.com/privacy">politique de confidentialité</a> et les <a href="https://policies.google.com/terms">conditions d\'utilisation</a> de Google s\'appliquent.</p><p id="en">This form is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply.</p>');
+}); 
+</script>
+
+<style>
+.grecaptcha-badge {
+    position: absolute;
+    opacity: 0;
+}
+.elementor-g-recaptcha p {
+    position: absolute;
+    opacity: 0.8;
+    color: #767676;
+    font-family: var( --e-global-typography-text-font-family ), Sans-serif;
+    font-weight: 700;
+    display: block;
+    font-size: 13px;
+    margin-top: -3px;
+	line-height: 1.2;
+}
+.elementor-g-recaptcha p a {
+	color: var( --e-global-color-9f48c55 );
+}
+.elementor-field-type-submit {
+    z-index: 1;
+    margin-top: 30px;
+}
+.elementor-g-recaptcha #fr,
+.elementor-g-recaptcha #en {
+	display: none;	
+}
+[lang="fr-FR"] .elementor-g-recaptcha #fr,
+[lang="fr-CA"] .elementor-g-recaptcha #fr {
+	display: initial;	
+}
+[lang="en-US"] .elementor-g-recaptcha #en {
+	display: initial;	
+}
+@media (max-width: 767px) {
+    .elementor-field-type-submit {
+        margin-top: 40px;
+    }
+}
+</style>
